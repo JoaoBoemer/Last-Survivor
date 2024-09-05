@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
 {
     public void OnClick_Play()
     {
-        UIManager.OpenMenu(Menu.START_MENU, gameObject);
+        UIManager.OpenMenu(Menu.START_GAME, gameObject);
     }
 
     public void OnClick_Shop()
