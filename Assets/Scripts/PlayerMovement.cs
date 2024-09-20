@@ -184,13 +184,19 @@ public class PlayerMovement : MonoBehaviour {
             if (yAxis == 0 || yAxis < 0 && Grounded())
             {
                 //anim.SetTrigger("1");
+                Debug.Log("Atacou");
                 Collider2D[] objectsToHit = Physics2D.OverlapCircleAll(attackTransform.position, attackRadius, attackableLayer);
                 if (objectsToHit.Length > 0)
                 {
-                    pState.recoilingX = true;
+                    // pState.recoilingX = true;
                 }
+
                 for (int i = 0; i < objectsToHit.Length; i++)
                 {
+                    if(objectsToHit[i].CompareTag("Enemy"))
+                    {
+                        Debug.Log(objectsToHit.GetType());
+                    }
                     //Here is where you would do whatever attacking does in your script.
                     //In my case its passing the Hit method to an Enemy script attached to the other object(s).
                 }
