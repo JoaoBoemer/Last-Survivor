@@ -11,7 +11,6 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider SFXSlider;
-    
     [SerializeField] private Toggle fullscreenTog;
     [SerializeField] private TMP_Text resolutionText;
     public List<Resolution> resolutions = new List<Resolution>();
